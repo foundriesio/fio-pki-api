@@ -121,7 +121,7 @@ cat devices/online-device/sota.toml | grep repo_server
 ```
 Check if you can fetch Targets
 ```
-curl --cacert devices/online-device/root.crt --cert devices/online-key devices/online-device/pkey.pem <repo_server>/targets.json | jq
+curl --cacert devices/online-device/root.crt --cert devices/online-device/client.pem --key devices/online-device/pkey.pem <repo_server>/targets.json | jq
 ```
 
 Get an URL of the Factory OSTree Server
